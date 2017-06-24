@@ -1,0 +1,21 @@
+<h2>List of Drones</h2>
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Propeller</th>
+    <th>Max Speed</th>
+    <th></th>
+    <th></th>
+  </tr>
+    <% drones.forEach((drone) => { %>
+      <tr>
+        <td><%=drone.droneName%></td>
+        <td><%=drone.propellers%></td>
+        <td><%=drone.maxSpeed%></td>
+        <td><button type="button" class="btn btn-warning">Edit</button></td>
+        <td><button type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+        <% } ) %>
+</table>
+<a href='drones/new' class="btn btn-primary">New</a>
