@@ -1,5 +1,10 @@
 <h2>New Drone</h2>
 <form action="/drones" method="POST">
+  <% if (typeof(errors) !== "undefined"){ %>
+    <% for (let error in errors){ %>
+      <li><%= errors[error].message %></li>
+    <% } %>
+  <% } %>
   <div class="form-group">
     <label for="droneName">Name:</label>
     <input type="text" name="droneName" id="dronaName" class="form-control">
